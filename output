@@ -1,0 +1,16 @@
+ 2130  kubectl get clusterroles --all-namespaces
+ 2131  kubectl -n kube-system edit configmap aws-auth\n
+ 2132  kubectl -n kube-system edit configmap aws-auth\n
+ 2133  kubectl get configmap/aws-auth --namespace kube-system -o yaml\n
+ 2134  kubectl get configmap/aws-auth --namespace kube-system -o yaml > k.yaml
+ 2135  kubectl apply -f k.yaml 
+ 2136  helm install aws-load-balancer-controller eks/aws-load-balancer-controller \\n  -n kube-system \\n  --set clusterName=terraform-eks-cluster \\n  --set serviceAccount.create=false \\n  --set serviceAccount.name=aws-load-balancer-controller \\n--set image.repository=602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-load-balancer-controller
+ 2137  history
+ 2138  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.3.1/docs/examples/2048/2048_full.yaml
+ 2139  kubectl get ingress/ingress-2048 -n game-2048
+ 2140  kubectl get ingress/ingress-2048 -n game-2048
+ 2141  kubectl get ingress/ingress-2048 -n game-2048
+ 2142  kubectl get ingress/ingress-2048 -n game-2048
+ 2143  kubectl get ingress/ingress-2048 -n game-2048
+ 2144  kubectl logs ingress/ingress-2048 -n game-2048
+ 2145  kubectl logs ingress -n game-2048
