@@ -115,7 +115,7 @@ resource "aws_eks_identity_provider_config" "demo" {
     oidc {
         client_id = "${substr(aws_eks_cluster.demo.identity.0.oidc.0.issuer, -32, -1)}"
         identity_provider_config_name = "sdemonew"
-        issuer_url =  "https://.${aws_iam_openid_connect_provider.demo.url}"
+        issuer_url =  "https://${aws_iam_openid_connect_provider.demo.url}"
       
         }  
        
